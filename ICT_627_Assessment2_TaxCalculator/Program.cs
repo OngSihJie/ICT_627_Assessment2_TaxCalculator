@@ -17,7 +17,7 @@ namespace ICT_627_Assessment2_TaxCalculator
 
             if (string.Equals(e, "yes", StringComparison.InvariantCultureIgnoreCase))
             {
-                Console.WriteLine("Your tax code is MS L. ");//output
+                Console.WriteLine("Your tax code is M SL. ");//output
             }
             else if (string.Equals(e, "no", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -26,7 +26,7 @@ namespace ICT_627_Assessment2_TaxCalculator
         }
         static void SecondaryTaxCode() //function for secondary 
         {
-            Console.Write("What is your annual income from all source?");//ask for annual income
+            Console.Write("What is your annual income from all sources?");//ask for annual income
             int c = Convert.ToInt32(Console.ReadLine());
 
             if (c <= 14000)//less than 14000
@@ -119,7 +119,7 @@ namespace ICT_627_Assessment2_TaxCalculator
 
                         if (string.Equals(c, "yes", StringComparison.InvariantCultureIgnoreCase))
                         {
-                            Console.Write("Are you a New Zealandtax resident? ");
+                            Console.Write("Are you a New Zealand tax resident?  (Yes/No)");
                             string f = Console.ReadLine();
 
                             if (string.Equals(f, "yes", StringComparison.InvariantCultureIgnoreCase))
