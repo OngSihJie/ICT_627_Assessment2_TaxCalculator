@@ -177,29 +177,29 @@ namespace ICT_627_Assessment2_TaxCalculator
                             Console.WriteLine("What is your annual income?");
                             double ai = Convert.ToDouble(Console.ReadLine());
                             double iafterdeduction; double tax; double takehomepay;
-                            if (ai <= 14000)
+                            if (0 <= ai && ai <= 14000)
                             {
                                 tax = ai * 0.105;
                                 iafterdeduction = ai - tax;// calculate income after tax
-                                Console.WriteLine($"Your total tax is {tax}");//show tax
-                                Console.WriteLine($"Your take-home pay is {iafterdeduction}");//show the take-home pay annually
-                                Console.WriteLine("Do you wish to calculate the take-home pay weekly, fornightly or monthly");
+                                Console.WriteLine($"Your total tax is {tax.ToString("F2")}");//show tax
+                                Console.WriteLine($"Your take-home pay is {iafterdeduction.ToString("F2")}");//show the take-home pay annually
+                                Console.WriteLine("Do you wish to calculate the take-home pay weekly(w), fornightly(f) or monthly(m)");
                                 string doit = Console.ReadLine();
 
-                                if (string.Equals(doit, "weekly", StringComparison.InvariantCultureIgnoreCase))//weekly
+                                if (string.Equals(doit, "w", StringComparison.InvariantCultureIgnoreCase))//weekly
                                 {
                                     takehomepay = iafterdeduction / 52;
-                                    Console.WriteLine($"Your weekly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your weekly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "fortnightly", StringComparison.InvariantCultureIgnoreCase))//fortnightly
+                                else if (string.Equals(doit, "f", StringComparison.InvariantCultureIgnoreCase))//fortnightly
                                 {
                                     takehomepay = iafterdeduction / 26;
-                                    Console.WriteLine($"Your fortnightly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your fortnightly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "monthly", StringComparison.InvariantCultureIgnoreCase))//monthly
+                                else if (string.Equals(doit, "m", StringComparison.InvariantCultureIgnoreCase))//monthly
                                 {
                                     takehomepay = iafterdeduction / 12;
-                                    Console.WriteLine($"Your monthly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your monthly pay is {takehomepay.ToString("F2")}. ");
                                 }
                                 else
                                 {
@@ -211,25 +211,25 @@ namespace ICT_627_Assessment2_TaxCalculator
                             {
                                 tax = (ai - 14000) * 0.175 + 1470;
                                 iafterdeduction = ai - tax;//calculate income after tax
-                                Console.WriteLine($"Your total tax is {tax}");
-                                Console.WriteLine($"Your take-home pay is {iafterdeduction}");
-                                Console.WriteLine("Do you wish to calculate the take-home pay weekly, fornightly or monthly");
+                                Console.WriteLine($"Your total tax is {tax.ToString("F2")}");
+                                Console.WriteLine($"Your take-home pay is {iafterdeduction.ToString("F2")}");
+                                Console.WriteLine("Do you wish to calculate the take-home pay weekly(w), fornightly(f) or monthly(m)");
                                 string doit = Console.ReadLine();
 
-                                if (string.Equals(doit, "weekly", StringComparison.InvariantCultureIgnoreCase))//weekly
+                                if (string.Equals(doit, "w", StringComparison.InvariantCultureIgnoreCase))//weekly
                                 {
                                     takehomepay = iafterdeduction / 52;
-                                    Console.WriteLine($"Your weekly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your weekly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "fortnightly", StringComparison.InvariantCultureIgnoreCase))//fortnightly
+                                else if (string.Equals(doit, "f", StringComparison.InvariantCultureIgnoreCase))//fortnightly
                                 {
                                     takehomepay = iafterdeduction / 26;
-                                    Console.WriteLine($"Your fortnightly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your fortnightly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "monthly", StringComparison.InvariantCultureIgnoreCase))//monthly
+                                else if (string.Equals(doit, "m", StringComparison.InvariantCultureIgnoreCase))//monthly
                                 {
                                     takehomepay = iafterdeduction / 12;
-                                    Console.WriteLine($"Your monthly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your monthly pay is {takehomepay.ToString("F2")}. ");
                                 }
                                 else
                                 {
@@ -241,25 +241,25 @@ namespace ICT_627_Assessment2_TaxCalculator
                             {
                                 tax = (ai - 48000) * 0.3 + 1470 + 5950;
                                 iafterdeduction = ai - tax;
-                                Console.WriteLine($"Your total tax is {tax}");
-                                Console.WriteLine($"Your take-home pay is {iafterdeduction}");//show take-home pay
-                                Console.WriteLine("Do you wish to calculate the take-home pay weekly, fornightly or monthly");//ask for next calculation
+                                Console.WriteLine($"Your total tax is {tax.ToString("F2")}");
+                                Console.WriteLine($"Your take-home pay is {iafterdeduction.ToString("F2")}");//show take-home pay
+                                Console.WriteLine("Do you wish to calculate the take-home pay weekly(w), fornightly(f) or monthly(m)");//ask for next calculation
                                 string doit = Console.ReadLine();
 
-                                if (string.Equals(doit, "weekly", StringComparison.InvariantCultureIgnoreCase))//weekly
+                                if (string.Equals(doit, "w", StringComparison.InvariantCultureIgnoreCase))//weekly
                                 {
                                     takehomepay = iafterdeduction / 52;
-                                    Console.WriteLine($"Your weekly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your weekly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "fortnightly", StringComparison.InvariantCultureIgnoreCase))//fortnightly
+                                else if (string.Equals(doit, "f", StringComparison.InvariantCultureIgnoreCase))//fortnightly
                                 {
                                     takehomepay = iafterdeduction / 26;
-                                    Console.WriteLine($"Your fortnightly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your fortnightly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "monthly", StringComparison.InvariantCultureIgnoreCase))//monthly
+                                else if (string.Equals(doit, "m", StringComparison.InvariantCultureIgnoreCase))//monthly
                                 {
                                     takehomepay = iafterdeduction / 12;
-                                    Console.WriteLine($"Your monthly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your monthly pay is {takehomepay.ToString("F2")}. ");
                                 }
                                 else
                                 {
@@ -271,30 +271,35 @@ namespace ICT_627_Assessment2_TaxCalculator
                             {
                                 tax = (ai - 70000) * 0.33 + 1470 + 5950 + 6600;
                                 iafterdeduction = ai - tax;
-                                Console.WriteLine($"Your total tax is {tax}");
-                                Console.WriteLine($"Your take-home pay is {iafterdeduction}");
-                                Console.WriteLine("Do you wish to calculate the take-home pay weekly, fornightly or monthly");
+                                Console.WriteLine($"Your total tax is {tax.ToString("F2")}");
+                                Console.WriteLine($"Your take-home pay is {iafterdeduction.ToString("F2")}");
+                                Console.WriteLine("Do you wish to calculate the take-home pay weekly(w), fornightly(f) or monthly(m)");
                                 string doit = Console.ReadLine();
 
-                                if (string.Equals(doit, "weekly", StringComparison.InvariantCultureIgnoreCase))
+                                if (string.Equals(doit, "w", StringComparison.InvariantCultureIgnoreCase))
                                 {
                                     takehomepay = iafterdeduction / 52;
-                                    Console.WriteLine($"Your weekly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your weekly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "fortnightly", StringComparison.InvariantCultureIgnoreCase))
+                                else if (string.Equals(doit, "f", StringComparison.InvariantCultureIgnoreCase))
                                 {
                                     takehomepay = iafterdeduction / 26;
-                                    Console.WriteLine($"Your fortnightly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your fortnightly pay is {takehomepay.ToString("F2")}. ");
                                 }
-                                else if (string.Equals(doit, "monthly", StringComparison.InvariantCultureIgnoreCase))
+                                else if (string.Equals(doit, "m", StringComparison.InvariantCultureIgnoreCase))
                                 {
                                     takehomepay = iafterdeduction / 12;
-                                    Console.WriteLine($"Your monthly pay is {takehomepay}. ");
+                                    Console.WriteLine($"Your monthly pay is {takehomepay.ToString("F2")}. ");
                                 }
                                 else
                                 {
                                     Console.WriteLine("Please input properly!");
                                 }
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Please input properly!");
                                 break;
                             }
 
